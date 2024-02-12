@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="pics/pic-3.png" type="image/x-icon">
+        <title>Bakemono's Box</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        
+        <video autoplay loop muted>
+            <source src="bg.mp4" type="video/mp4">
+        </video>
+
+        <!-- insert img ng monster -->
+        <img src="pics/mascot_logo.gif" alt="cube monster">
+
+        <div class="left-box">
+            <h3>Bakemono's Box</h3>
+
+            <center>
+            <a href="game.html">
+            <button>Start Game</button></a>
+            <button type="submit" onclick="openPopup()" style="width: 100px; height: 40px;">Rules</button>
+            </center>
+
+        </div>
+
+        <div class="popup" id="popup">
+            <h2>Rules</h2>
+            <li>User has 3 guesses to guess the word letter by letter. If user failed to guess the word, the game will automatically restart</li>
+            <li>Each questions consists of 10 points</li>
+            <li>User has the ability to use a hint. They can choose what type of letter (vowel or consonant) they want to reveal.</li>
+            <li>Usage of hint is 25 points. User can use a hint if their points is less than 25 points</li>
+            <button type="button" onclick="closePopup()">Close</button> <!--button para mapunta sa main page ng laro-->
+        </div>
+
+        <script> 
+        
+            let rules = document.getElementById("popup");
+
+                function openPopup() {
+                    popup.classList.add("open-popup");
+                }
+
+                function closePopup() {
+                    popup.classList.remove("open-popup");
+                }
+                
+        </script>
+        
+    </body>
+
+</html>

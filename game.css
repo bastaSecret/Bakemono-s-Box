@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour:SCAN@-31&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #210933;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-100;
+}
+
+.exit img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    border: 3px solid #000;
+    border-radius: 15px;
+    background-color: #87060a;
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.main-left { 
+    height: 650px;
+    width: 700px;
+    /*para magcenter ung laman ng container*/
+    align-items: center;
+    text-align: center;
+}
+
+.main-left img {
+    width: 600px; 
+    height: 600px; 
+    text-align: center; 
+    align-items: center; 
+}
+
+.main-left h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: Sixtyfour;
+    color: #F4FAFF;
+}
+
+.main-left h3{
+    font-size: 25px;
+    font-style: bold;
+    color: #F4FAFF;
+}
+
+.main-right {
+    display: flex;
+    height: 700px;
+    width:  700px;
+    align-items: center;
+    justify-content: center;
+    background-color: #49233d;
+    color: #e9cdc8;
+    padding: 50px;
+}
+
+.content {
+    height: auto;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.user-input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.word-display { 
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.word-display .letter {
+    width: 28px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e9cdc8;
+    border-bottom: 3px solid #e9cdc8;
+}
+
+.word-display .letter.guessed {
+    border-color: transparent;
+    text-transform: uppercase;
+    margin: -40px 0 35px;
+}
+
+.user-input button {
+    width: 50px;
+    height: 35px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: #bb3c40; /*background color ng button*/
+    color: #e9cdc8;
+}
+
+/*popup para sa hint*/
+
+.userHint {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #49233d;
+    visibility: hidden;
+    border-color: none;
+    box-shadow: 0 5px 7px #1f1c1c;
+}
+
+.openHint {
+    visibility: visible;
+}
+
+.userHint button{
+    width: 150px;
+    height: 45px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: #87060a;
+    color: #e9cdc8;
+}
+
+.userHint p{
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+/*end css para sa popup ng hint*/
+
+.details {
+    font-size: 20px;
+}
+
+.details button {
+    height: 45px;
+    width: 300px;
+    font-size: 17px;
+    font-style: bold;
+}
+
+.keyboard {
+    display: flex;
+    gap:5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.keyboard button {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin: 2px;
+    text-align: center;
+    background-color: #af9cc9;
+    font-style: bold;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.keyboard button:hover{
+    background:#ceb8ec;
+    cursor:pointer;
+}
+
+.game-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    z-index:999;
+    pointer-events: none;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    transition: opacity 0.1s ease;
+}
+.game-modal.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.game-modal .content {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+.game-modal img {
+    max-width: 130px;
+    margin-bottom: 10px;
+}
+.game-modal h4 {
+    font-size: 1.53rem;
+}
+.game-modal p {
+    font-size: 1.50rem;
+    margin: 15px 0 30px;
+    font-weight: 400;
+}
+.game-modal p b{
+    font-weight: 600;
+}
+.game-modal button{
+    padding:12px 23px;
+    background: #49233d;
+    color:#fff;
+    border-radius: 5px;
+    cursor:pointer;
+}

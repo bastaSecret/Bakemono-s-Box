@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pics/pic-3.png" type="image/x-icon">
+    <title>Bakemono's Box</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="word-list.js" defer></script>
+    <script src="functions.js" defer></script>
+</head>
+<body>
+    <div class="game-modal">
+        <div class="content">
+            <img src="sample.gif" alt="sample.gif">
+            <h4>Game Over!</h4>
+            <p>The correct word was: <b>rainbow</b></p>
+            <button class="play-again">Continue</button>
+        </div>
+    </div>
+
+    <video autoplay loop muted>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+
+    <a href="index.html" class="exit">
+        <img src="exit.png" alt="exit game">
+    </a>
+
+    <div class="main-left">
+        <h2>Guess it Right!</h2>
+        <h3 class="points" id="points">Points: <b class="tite">0</b></h3>
+        <img src="pics/pic-1.png" alt="cube monster">
+    </div>
+
+    <div class="main-right">
+        <div class="content"> 
+            <div class="user-input" id="user">
+                <div class="inputs">
+                    <ul class="word-display">
+                        <li class="letter"></li>
+                        <li class="letter"></li>
+                        <li class="letter-guessed">a</li>
+                        <li class="letter"></li>
+                        <li class="letter"></li>
+                        <li class="letter"></li>
+                    </ul>
+                </div>
+
+                <button type="button" onclick="chooseHint()">Hint</button>
+
+                <div class="userHint" id="userHint">
+                    <p>Choose what type of letter you want to reveal:</p>
+                    <button type="button" onclick="revealVowel()">Vowels</button>
+                    <button type="button" onclick="revealConsonant()">Consonants</button>
+
+                    <br>
+                    <button type="button" onclick="closeHint()">Close</button>
+                </div>
+
+
+            </div>
+
+            <br>
+            
+            <div class="details"> 
+
+                <p id="Questions">
+                    <h3 class="question-text">
+                        <b>Lorem</b>
+                    </h3>
+                </p>
+                <br>
+                <p class="guess-text">Guesses Remaining: <b>0 / 3</b></p>
+                <br>
+                <br>
+                <div class="keyboard">
+                    
+                </div>
+
+            </div>
+                
+        </div>
+    </div>
+
+
+</body>
+</html>

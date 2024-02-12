@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour:SCAN@-31&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #210933;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body img {
+    height: 600px;
+    margin: 30px;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-100;
+}
+
+.left-box {
+    height: 500px;
+    width: 700px;
+    padding: 30px;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.left-box h3 {
+    font-size: 60px;
+    font-family: Sixtyfour;
+    padding: 30px;
+    color: #e9cdc8;
+    text-shadow: 10px 10px 15px #520406;
+}
+
+.left-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    color: #e9cdc8;
+    background-color: #87060a; 
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px #520406;
+    margin: 30px;
+}
+
+.popup {
+    width: 650px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #322544;
+    visibility: hidden;
+    border-color: none;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px 5px #6b6b6bca; /* glowing shadow effect */
+    padding: 30px;
+    color: #e9cdc8;
+
+}
+
+.open-popup {
+    visibility: visible;
+}
+
+.popup h2 {
+    font-size: 35px;
+    margin: 30px 0 10px;
+}
+
+.popup li {
+    font-size: 20px;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    /*button dun sa may rules pop up bago mag laro*/
+    height: 40px;
+    width: 80px;
+    font-size: 18px;
+    text-align: center; /*position ng text sa loob ng button*/
+    color: #e9cdc8; /*kulay ng font nung button*/
+    background-color: #87060a; /*kulay nung background ng button*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
